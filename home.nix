@@ -96,7 +96,10 @@
   programs.bat.enable = true;
   programs.btop.enable = true;
   programs.sioyek.enable = true;
-  programs.obsidian.enable = true;
+  programs.obsidian = {
+    enable = true;
+    vaults.obsidian-main-vault.enable = true;
+  };
 
   # programs.wofi.enable = true;
   services.cliphist.enable = true;
