@@ -16,6 +16,7 @@
   home.packages = with pkgs; [
     quickshell
     brightnessctl
+    hyprlauncher
 
     jdk21_headless
     nil
@@ -97,7 +98,7 @@
   programs.sioyek.enable = true;
   programs.obsidian.enable = true;
 
-  programs.wofi.enable = true;
+  # programs.wofi.enable = true;
   services.cliphist.enable = true;
   services.wl-clip-persist.enable = true;
 }
