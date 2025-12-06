@@ -99,6 +99,11 @@
   programs.obsidian = {
     enable = true;
     vaults.obsidian-main-vault.enable = true;
+    defaultSettings.appearance = {
+      cssTheme = "TimeStone";
+      theme = "obsidian";
+      accentColor = "#65ba5a";
+    };
   };
 
   # programs.wofi.enable = true;
