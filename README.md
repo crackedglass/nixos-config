@@ -1,4 +1,4 @@
 # nixos-config
 My NixOS configuration
 
-Don't take it serios, it's pretty chaotic
+Don't take it serious, it's pretty chaotic
