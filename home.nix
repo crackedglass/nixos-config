@@ -7,6 +7,12 @@
   home.homeDirectory = "/home/ilya";
   home.stateVersion = "26.05";
 
+  home.file.${config.xdg.configHome} = {
+    enable = true;
+    source = ./dotfiles/.;
+    recursive = true;
+  };
+
   home.packages = with pkgs; [
     quickshell
     brightnessctl
@@ -36,6 +42,7 @@
   };
 
   home.shell.enableZshIntegration = true;
+  programs.kitty.shellIntegration.enableZshIntegration = true;
 
   programs.zsh = {
     enable = true;
