@@ -24,7 +24,6 @@
     python313Packages.pydbus
 
     google-chrome
-    amnezia-vpn
     telegram-desktop
     libreoffice
     bitwarden-desktop

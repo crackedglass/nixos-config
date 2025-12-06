@@ -74,6 +74,7 @@
     git
     linuxPackages_latest.amneziawg
   ];
+  programs.amnezia-vpn.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   nixpkgs.config.allowUnfree = true;
