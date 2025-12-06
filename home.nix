@@ -2,8 +2,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   home.username = "ilya";
   home.homeDirectory = "/home/ilya";
   home.stateVersion = "26.05";
@@ -49,7 +48,7 @@
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [ "git" ];
+      plugins = ["git"];
     };
   };
 

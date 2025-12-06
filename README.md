@@ -1,2 +1,4 @@
 # nixos-config
-My NixOs configuration
+My NixOS configuration
+
+Don't take it serios, it's pretty chaotic
