@@ -92,6 +92,11 @@
     };
   };
 
+  programs.bun = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.btop.enable = true;
