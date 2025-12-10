@@ -29,6 +29,7 @@
     libreoffice
     bitwarden-desktop
     jetbrains.idea-community
+    claude-code-router
   ];
 
   services.hyprpaper = {
@@ -96,7 +97,7 @@
     enable = true;
     enableGitIntegration = true;
   };
-
+  programs.claude-code.enable = true;
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.btop.enable = true;
