@@ -17,6 +17,7 @@
     quickshell
     brightnessctl
     hyprlauncher
+    hyprshutdown
 
     jdk21_headless
     nil
