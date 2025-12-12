@@ -29,6 +29,7 @@
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "Europe/Moscow";
+  i18n.defaultLocale = "ru_RU.UTF-8";
 
   services.getty.autologinUser = "ilya";
 
