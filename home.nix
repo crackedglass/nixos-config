@@ -115,4 +115,5 @@
   # programs.wofi.enable = true;
   services.cliphist.enable = true;
   services.wl-clip-persist.enable = true;
+  programs.wlogout.enable = true;
 }
