@@ -111,6 +111,7 @@
       accentColor = "#65ba5a";
     };
   };
+  programs.jq.enable = true;
 
   # programs.wofi.enable = true;
   services.cliphist.enable = true;
