@@ -29,7 +29,26 @@
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "Europe/Moscow";
-  i18n.defaultLocale = "ru_RU.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  # Optionally (BEWARE: requires a different format with the added /UTF-8)
+  i18n.extraLocales = ["ru_RU.UTF-8/UTF-8"];
+
+  # Optionally
+  i18n.extraLocaleSettings = {
+    # LC_ALL = "en_US.UTF-8"; # This overrides all other LC_* settings.
+    LC_CTYPE = "en_US.UTF8";
+    LC_ADDRESS = "ru_RU.UTF-8";
+    LC_MEASUREMENT = "ru_RU.UTF-8";
+    LC_MESSAGES = "en_US.UTF-8";
+    LC_MONETARY = "ru_RU.UTF-8";
+    LC_NAME = "ru_RU.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "ru_RU.UTF-8";
+    LC_TELEPHONE = "ru_RU.UTF-8";
+    LC_TIME = "ru_RU.UTF-8";
+    LC_COLLATE = "ru_RU.UTF-8";
+  };
 
   services.getty.autologinUser = "ilya";
 
@@ -64,10 +83,12 @@
       CPU_HWP_DYN_BOOST_ON_BAT = 0;
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "balance-performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance-power";
-      PLATFORM_PROFILE_ON_AC = "balance-performance";
-      PLATFORM_PROFILE_ON_BAT = "low-power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_performance";
+      CPU_ENERGY_PERF_POLICY_ON_SAV = "power";
+      PLATFORM_PROFILE_ON_AC = "performance";
+      PLATFORM_PROFILE_ON_BAT = "balance";
+      PLATFORM_PROFILE_ON_SAV = "low-power";
       START_CHARGE_THRESH_BAT0 = 75;
       STOP_CHARGE_THRESH_BAT0 = 81;
     };
@@ -96,6 +117,8 @@
     kitty
     git
     linuxPackages_latest.amneziawg
+    ffmpeg
+    intel-media-driver
   ];
   programs.amnezia-vpn.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
