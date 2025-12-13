@@ -29,6 +29,7 @@
     rustc
     clippy
     rust-analyzer
+    rustfmt
     typst
     tinymist
     typstyle
@@ -82,6 +83,13 @@
           auto-format = true;
           formatter = {
             command = "alejandra";
+          };
+        }
+        {
+          name = "rust";
+          auto-format = true;
+          formatter = {
+            command = "rustfmt";
           };
         }
         {
