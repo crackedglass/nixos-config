@@ -29,6 +29,9 @@
     rustc
     clippy
     rust-analyzer
+    typst
+    tinymist
+    typstyle
 
     google-chrome
     telegram-desktop
@@ -79,6 +82,13 @@
           auto-format = true;
           formatter = {
             command = "alejandra";
+          };
+        }
+        {
+          name = "typst";
+          auto-format = true;
+          formatter = {
+            command = "typstyle";
           };
         }
       ];
