@@ -125,7 +125,16 @@
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.btop.enable = true;
-  programs.sioyek.enable = true;
+  programs.sioyek = {
+    enable = true;
+    bindings = {
+      "zoom_in" = "=";
+      "fit_to_page_width" = "+";
+    };
+    config = {
+      "background_color" = "0.0 0.0 0.0";
+    };
+  };
   programs.obsidian = {
     enable = true;
     vaults.obsidian-main-vault.enable = true;
