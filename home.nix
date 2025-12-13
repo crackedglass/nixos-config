@@ -17,12 +17,18 @@
     quickshell
     brightnessctl
     hyprlauncher
+    hyprtoolkit
 
     jdk21_headless
     nil
     alejandra
     python313
     python313Packages.pydbus
+    gcc
+    cargo
+    rustc
+    clippy
+    rust-analyzer
 
     google-chrome
     telegram-desktop
@@ -117,4 +123,5 @@
   services.cliphist.enable = true;
   services.wl-clip-persist.enable = true;
   programs.wlogout.enable = true;
+  programs.bluetuith.enable = true;
 }
