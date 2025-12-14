@@ -75,6 +75,16 @@
     defaultEditor = true;
     settings = {
       editor.line-number = "relative";
+
+      theme = "catppuccin_macchiato";
+      editor.cursorline = true;
+      editor.color-modes = true;
+      editor.cursor-shape = {
+        insert = "bar";
+        normal = "block";
+        select = "underline";
+      };
+      editor.indent-guides.render = true;
     };
     languages = {
       language = [
@@ -121,6 +131,7 @@
     enable = true;
     enableGitIntegration = true;
   };
+  programs.gh.enable = true;
   programs.claude-code.enable = true;
   programs.fzf.enable = true;
   programs.bat.enable = true;
