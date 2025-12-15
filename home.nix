@@ -156,6 +156,7 @@
     };
   };
   programs.jq.enable = true;
+  programs.lazydocker.enable = true;
 
   # programs.wofi.enable = true;
   services.cliphist.enable = true;
