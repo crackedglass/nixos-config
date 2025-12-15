@@ -53,6 +53,15 @@
     };
   };
 
+  xdg.desktopEntries = {
+    sioyek = {
+      name = "sioyek";
+      exec = "sioyek --new-instance %f";
+      terminal = false;
+      mimeType = ["application/pdf"];
+    };
+  };
+
   home.shell.enableZshIntegration = true;
   programs.kitty.shellIntegration.enableZshIntegration = true;
 
@@ -145,6 +154,9 @@
     };
     config = {
       "background_color" = "0.0 0.0 0.0";
+      "should_launch_new_window" = "1";
+      "page_separator_width" = "5";
+      "page_separator_color" = "0.0 0.0 0.0";
     };
   };
   programs.obsidian = {
