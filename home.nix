@@ -18,6 +18,7 @@
     brightnessctl
     hyprlauncher
     hyprtoolkit
+    hyprmon
 
     jdk21_headless
     nil
