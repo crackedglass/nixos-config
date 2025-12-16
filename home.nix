@@ -24,7 +24,6 @@
     nil
     alejandra
     python313
-    python310
     python313Packages.pydbus
     gcc
     cargo
