@@ -24,6 +24,7 @@
     nil
     alejandra
     python313
+    python310
     python313Packages.pydbus
     gcc
     cargo
@@ -41,6 +42,7 @@
     bitwarden-desktop
     jetbrains.idea-community
     claude-code-router
+    poppler
   ];
 
   services.hyprpaper = {
