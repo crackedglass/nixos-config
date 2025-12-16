@@ -41,7 +41,7 @@
     bitwarden-desktop
     jetbrains.idea-community
     claude-code-router
-    poppler
+    poppler-utils
   ];
 
   services.hyprpaper = {
