@@ -50,12 +50,18 @@
     LC_COLLATE = "ru_RU.UTF-8";
   };
 
-  services.getty.autologinUser = "ilya";
+  # services.getty.autologinUser = "ilya";
 
-  programs.hyprland = {
-    enable = true;
-    # xwayland.enable = true;
-    withUWSM = true;
+  # programs.hyprland = {
+  #   enable = true;
+  #   # xwayland.enable = true;
+  #   withUWSM = true;
+  # };
+  #
+  services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm.enable = true;
+    displayManager.sddm.wayland.enable = true;
   };
 
   # Enable CUPS to print documents.
@@ -74,25 +80,27 @@
   services.thermald.enable = true;
   services.system76-scheduler.settings.cfsProfiles.enable = true;
 
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
-      CPU_HWP_DYN_BOOST_ON_AC = 1;
-      CPU_HWP_DYN_BOOST_ON_BAT = 0;
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_performance";
-      CPU_ENERGY_PERF_POLICY_ON_SAV = "power";
-      PLATFORM_PROFILE_ON_AC = "performance";
-      PLATFORM_PROFILE_ON_BAT = "balance";
-      PLATFORM_PROFILE_ON_SAV = "low-power";
-      START_CHARGE_THRESH_BAT0 = 75;
-      STOP_CHARGE_THRESH_BAT0 = 81;
-    };
-  };
+  # services.tlp = {
+  #   enable = true;
+  #   settings = {
+  #     CPU_BOOST_ON_AC = 1;
+  #     CPU_BOOST_ON_BAT = 0;
+  #     CPU_HWP_DYN_BOOST_ON_AC = 1;
+  #     CPU_HWP_DYN_BOOST_ON_BAT = 0;
+  #     CPU_SCALING_GOVERNOR_ON_AC = "performance";
+  #     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+  #     CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+  #     CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_performance";
+  #     CPU_ENERGY_PERF_POLICY_ON_SAV = "power";
+  #     PLATFORM_PROFILE_ON_AC = "performance";
+  #     PLATFORM_PROFILE_ON_BAT = "balance";
+  #     PLATFORM_PROFILE_ON_SAV = "low-power";
+  #     START_CHARGE_THRESH_BAT0 = 75;
+  #     STOP_CHARGE_THRESH_BAT0 = 81;
+  #   };
+  # };
+
+  services.udisks2.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ilya = {
@@ -119,6 +127,22 @@
     linuxPackages_latest.amneziawg
     ffmpeg
     intel-media-driver
+
+    # KDE
+    kdePackages.kcalc
+    kdePackages.kcharselect
+    kdePackages.kclock
+    kdePackages.kcolorchooser
+    kdePackages.kolourpaint
+    kdePackages.ksystemlog
+    kdePackages.sddm-kcm
+    kdiff3
+    kdePackages.isoimagewriter
+    kdePackages.partitionmanager
+    hardinfo2
+    vlc
+    wayland-utils
+    wl-clipboard
   ];
   programs.amnezia-vpn.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

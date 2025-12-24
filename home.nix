@@ -14,11 +14,11 @@
   };
 
   home.packages = with pkgs; [
-    quickshell
+    # quickshell
     brightnessctl
-    hyprlauncher
-    hyprtoolkit
-    hyprmon
+    # hyprlauncher
+    # hyprtoolkit
+    # hyprmon
 
     jdk21_headless
     nil
@@ -44,13 +44,15 @@
     poppler-utils
   ];
 
-  services.hyprpaper = {
+  services.udiskie = {
     enable = true;
     settings = {
-      ipc = "on";
-      wallpaper = [
-        ",~/Images/corgi_dog_sleeping_on_the_doorstep-wallpaper-1920x1080.jpg"
-      ];
+      # workaround for
+      # https://github.com/nix-community/home-manager/issues/632
+      program_options = {
+        # replace with your favorite file manager
+        file_manager = "${pkgs.nemo-with-extensions}/bin/nemo";
+      };
     };
   };
 
@@ -62,6 +64,10 @@
       mimeType = ["application/pdf"];
     };
   };
+  # xdg.mimeApps.defaultApplications = {
+  #   "text/plain" = "helix.desktop";
+  #   "application/pdf" = "sioyer.desktop";
+  # };
 
   home.shell.enableZshIntegration = true;
   programs.kitty.shellIntegration.enableZshIntegration = true;
@@ -69,11 +75,11 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    loginExtra = ''
-      if [ -z $WAYLAND_DISPLAY ] && [ "$XDG_VTNR" = 1 ]; then
-        exec uwsm start -- hyprland-uwsm.desktop
-      fi
-    '';
+    # loginExtra = ''
+    #   if [ -z $WAYLAND_DISPLAY ] && [ "$XDG_VTNR" = 1 ]; then
+    #     exec uwsm start -- hyprland-uwsm.desktop
+    #   fi
+    # '';
     oh-my-zsh = {
       enable = true;
       theme = "agnoster";
@@ -173,8 +179,8 @@
   programs.lazydocker.enable = true;
 
   # programs.wofi.enable = true;
-  services.cliphist.enable = true;
-  services.wl-clip-persist.enable = true;
-  programs.wlogout.enable = true;
+  # services.cliphist.enable = true;
+  # services.wl-clip-persist.enable = true;
+  # programs.wlogout.enable = true;
   programs.bluetuith.enable = true;
 }
