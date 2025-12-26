@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   home.username = "ilya";
@@ -70,7 +71,6 @@
   # };
 
   home.shell.enableZshIntegration = true;
-  programs.kitty.shellIntegration.enableZshIntegration = true;
 
   programs.zsh = {
     enable = true;

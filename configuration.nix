@@ -122,7 +122,7 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    kitty
+    alacritty
     git
     linuxPackages_latest.amneziawg
     ffmpeg
@@ -156,12 +156,12 @@
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
     liberation_ttf
-    fira-code
-    fira-code-symbols
+    nerd-fonts.fira-code
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
     eb-garamond
+    nerd-fonts.jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
