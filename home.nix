@@ -33,6 +33,8 @@
     typst
     tinymist
     typstyle
+    vscode-langservers-extracted
+    prettier
 
     telegram-desktop
     libreoffice

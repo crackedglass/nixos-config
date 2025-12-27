@@ -39,6 +39,28 @@
             command = "typstyle";
           };
         }
+        {
+          name = "html";
+          auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "html"
+            ];
+          };
+        }
+        {
+          name = "css";
+          auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "css"
+            ];
+          };
+        }
       ];
     };
   };
