@@ -19,12 +19,6 @@
   };
 
   home.packages = with pkgs; [
-    # quickshell
-    brightnessctl
-    # hyprlauncher
-    # hyprtoolkit
-    # hyprmon
-
     jdk21_headless
     nil
     alejandra
@@ -40,7 +34,6 @@
     tinymist
     typstyle
 
-    google-chrome
     telegram-desktop
     libreoffice
     bitwarden-desktop
@@ -138,10 +131,4 @@
   };
   programs.jq.enable = true;
   programs.lazydocker.enable = true;
-
-  # programs.wofi.enable = true;
-  # services.cliphist.enable = true;
-  # services.wl-clip-persist.enable = true;
-  # programs.wlogout.enable = true;
-  programs.bluetuith.enable = true;
 }

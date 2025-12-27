@@ -81,6 +81,7 @@
   environment.systemPackages = with pkgs; [
     wget
     alacritty
+    google-chrome
     git
     linuxPackages_latest.amneziawg
     ffmpeg
@@ -101,6 +102,7 @@
     vlc
     wayland-utils
     wl-clipboard
+    brightnessctl
   ];
   programs.amnezia-vpn.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
