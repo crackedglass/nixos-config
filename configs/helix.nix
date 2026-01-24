@@ -17,6 +17,9 @@
       editor.bufferline = "multiple";
     };
     languages = {
+      language-server.gopls.config = {
+        "formatting.gofumpt" = true;
+      };
       language = [
         {
           name = "nix";
@@ -37,6 +40,39 @@
           auto-format = true;
           formatter = {
             command = "typstyle";
+          };
+        }
+        {
+          name = "json";
+          auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "json"
+            ];
+          };
+        }
+        {
+          name = "javascript";
+          auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "typescript"
+            ];
+          };
+        }
+        {
+          name = "typescript";
+          auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "typescript"
+            ];
           };
         }
         {

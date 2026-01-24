@@ -35,6 +35,9 @@
     typstyle
     vscode-langservers-extracted
     prettier
+    typescript-language-server
+    gopls
+    gofumpt
 
     telegram-desktop
     libreoffice
@@ -42,6 +45,8 @@
     jetbrains.idea-community
     claude-code-router
     poppler-utils
+
+    minikube
   ];
 
   services.udiskie = {
@@ -104,6 +109,7 @@
     enable = true;
     enableGitIntegration = true;
   };
+  programs.go.enable = true;
   programs.gh.enable = true;
   programs.claude-code.enable = true;
   programs.fzf.enable = true;
@@ -133,4 +139,5 @@
   };
   programs.jq.enable = true;
   programs.lazydocker.enable = true;
+  programs.ripgrep.enable = true;
 }
