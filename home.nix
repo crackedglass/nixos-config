@@ -7,6 +7,7 @@
   home.username = "ilya";
   home.homeDirectory = "/home/ilya";
   home.stateVersion = "26.05";
+  home.sessionPath = ["$HOME/go/bin"];
 
   imports = [
     ./configs/helix.nix
@@ -38,15 +39,24 @@
     typescript-language-server
     gopls
     gofumpt
+    ghc
+    kotlin
+    kotlin-language-server
+    ventoy
 
     telegram-desktop
     libreoffice
     bitwarden-desktop
-    jetbrains.idea-community
+    jetbrains.idea
     claude-code-router
     poppler-utils
+    unetbootin
 
     minikube
+    qemu
+    qemu_kvm
+
+    qbittorrent
   ];
 
   services.udiskie = {
@@ -140,4 +150,5 @@
   programs.jq.enable = true;
   programs.lazydocker.enable = true;
   programs.ripgrep.enable = true;
+  programs.gradle.enable = true;
 }
